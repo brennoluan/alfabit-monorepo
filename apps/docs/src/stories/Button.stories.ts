@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { fn } from "storybook/test";
 
-import { Button } from "@alfabit/button";
+import { Button } from "@brennoluan/alfabit-button";
 
 const meta = {
   title: "Example/Button",
@@ -21,6 +21,6 @@ export const Primary: Story = {
   args: {
     variant: "primary",
     size: "md",
-    label: "Primary Button",
+    children: "Primary Button",
   },
 };
