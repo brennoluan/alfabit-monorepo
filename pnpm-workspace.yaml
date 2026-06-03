@@ -3,3 +3,5 @@ packages:
   - "packages/*"
 allowBuilds:
   esbuild: set this to true or false
+minimumReleaseAgeExclude:
+  - '@brennoluan/alfabit-button@0.1.1'
