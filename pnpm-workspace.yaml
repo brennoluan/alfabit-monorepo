@@ -1,8 +1,9 @@
 packages:
   - "apps/*"
   - "packages/*"
+  - "scripts/*"
 allowBuilds:
   esbuild: set this to true or false
 minimumReleaseAgeExclude:
-  - '@brennoluan/alfabit-button@0.1.1'
-  - '@brennoluan/alfabit-tokens@0.1.0'
+  - "@brennoluan/alfabit-button@0.1.1"
+  - "@brennoluan/alfabit-tokens@0.1.0"
