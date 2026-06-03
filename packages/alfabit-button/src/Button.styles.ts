@@ -13,36 +13,48 @@ export const StyledButton = styled.button<ButtonProps>`
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 
-  ${({ variant }) =>
+  ${({
+    variant,
+    theme,
+  }: {
+    variant?: ButtonProps["variant"];
+    theme: ButtonProps["theme"];
+  }) =>
     variant === "primary" &&
     css`
-      background: ${blue.primary};
-      color: ${gray.white};
+      background: ${theme?.colors.primary};
+      color: ${theme?.colors.white};
       border: none;
 
       &:hover {
-        background: ${blue.hover};
+        background: ${theme?.colors.primary};
       }
 
       &:active {
-        background: ${blue.click};
+        background: ${theme?.colors.primary};
       }
 
       &:disabled {
-        background: ${gray.disabled};
+        background: ${theme?.colors.disabled};
         cursor: not-allowed;
       }
     `}
 
-  ${({ variant }) =>
+  ${({
+    variant,
+    theme,
+  }: {
+    variant?: ButtonProps["variant"];
+    theme?: ButtonProps["theme"];
+  }) =>
     variant === "secondary" &&
     css`
       background: transparent;
-      color: ${blue.primary};
-      border: 2px solid ${blue.primary};
+      color: ${theme?.colors.primary};
+      border: 2px solid ${theme?.colors.primary};
 
       &:hover {
-        background: #ede9ff;
+        background: ${theme?.colors.secondary};
       }
 
       &:active {
@@ -50,8 +62,8 @@ export const StyledButton = styled.button<ButtonProps>`
       }
 
       &:disabled {
-        color: #c3c3c3;
-        border-color: #c3c3c3;
+        color: ${theme?.colors.disabled};
+        border-color: ${theme?.colors.disabled};
         cursor: not-allowed;
       }
     `}
