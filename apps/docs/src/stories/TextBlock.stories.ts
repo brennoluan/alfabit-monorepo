@@ -1,6 +1,5 @@
-// @ts-ignore
-import type { Meta, StoryObj } from "@storybook/react";
-import { TextBlock } from "@brennoluan/alfabit-component";
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { TextBlock } from "@brennoluan/alfabit-textblock";
 
 const meta = {
   title: "Moléculas/TextBlock",
