@@ -51,6 +51,8 @@ async function createComponent(componentName) {
         );
 
         await fs.writeFile(filePath, content);
+      } else {
+        console.log("Arquivo não termina com os formatos esperados");
       }
 
       const renames = [
