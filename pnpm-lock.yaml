@@ -213,6 +213,9 @@ importers:
 
   apps/docs:
     dependencies:
+      '@alfabit/button':
+        specifier: workspace:*
+        version: link:../../packages/alfabit-button
       react:
         specifier: ^19.2.6
         version: 19.2.7
@@ -319,6 +322,9 @@ importers:
       styled-components:
         specifier: ^5.3.9
         version: 5.3.11(@babel/core@7.29.7)(react-dom@18.3.1(react@18.3.1))(react-is@17.0.2)(react@18.3.1)
+      tslib:
+        specifier: ^2.8.1
+        version: 2.8.1
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
