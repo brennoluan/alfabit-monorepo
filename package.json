@@ -1,5 +1,5 @@
 {
-  "name": "alfabit-monorepo",
+  "name": "@brennoluan/alfabit-monorepo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,5 +19,8 @@
     "@types/fs-extra": "^11.0.4",
     "fs-extra": "^11.2.0",
     "turbo": "^2.9.16"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
