@@ -265,6 +265,9 @@ importers:
       '@brennoluan/alfabit-button':
         specifier: workspace:*
         version: link:../../packages/alfabit-button
+      '@brennoluan/alfabit-input':
+        specifier: workspace:*
+        version: link:../../packages/alfabit-input
       '@brennoluan/alfabit-tokens':
         specifier: ^0.1.0
         version: 0.1.0
