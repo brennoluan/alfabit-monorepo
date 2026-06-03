@@ -52,6 +52,18 @@ async function createComponent(componentName) {
 
         await fs.writeFile(filePath, content);
       }
+
+      const renames = [
+        ["src/Component.tsx", `src/${componentName}.tsx`],
+        ["src/Component.styles.ts", `src/${componentName}.styles.ts`],
+        [
+          "src/Component.stories.ts",
+          `../../apps/docs/src/stories/${componentName}.stories.ts`,
+        ],
+      ];
+
+      for (const [oldPath, newPath] of renames) {
+      }
     }
   } catch (error) {
     console.error(`Erro ao criar o componente ${componentName}:`, error);
