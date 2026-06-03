@@ -350,6 +350,9 @@ importers:
 
   packages/alfabit-button:
     devDependencies:
+      '@brennoluan/alfabit-tokens':
+        specifier: workspace:*
+        version: link:../alfabit-tokens
       '@types/react':
         specifier: ^18.0.0
         version: 18.3.30

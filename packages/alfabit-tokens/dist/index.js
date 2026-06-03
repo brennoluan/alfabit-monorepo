@@ -20,43 +20,47 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var index_exports = {};
 __export(index_exports, {
-  colors: () => colors,
-  text: () => text
+  background: () => background,
+  blue: () => blue,
+  gray: () => gray,
+  violet: () => violet
 });
 module.exports = __toCommonJS(index_exports);
 
 // src/colors.ts
-var colors = {
-  bgLight: "#FFFFFF",
-  bgDark: "#F8F8F8"
+var background = {
+  light: "#FFFFFF",
+  dark: "#F8F8F8"
 };
-var text = {
-  gray: {
-    primary: "#181818",
-    secondary: "#5c5c5c",
-    tertiary: "#747474",
-    icon: "#7c7b7b",
-    border: "#d7d7d7",
-    divider: "#ededed",
-    disabled: "#8a8a8a"
-  },
-  blue: {
-    primary: "#2d5bff",
-    secondary: "#6284fd",
-    tertiary: "#96ADFF",
-    quaternary: "#ECF0FF",
-    hover: "#1B4AF0",
-    click: "#002ED0"
-  },
-  violet: {
-    primary: "#AF4BFE",
-    secondary: "#BE74F9",
-    tertiary: "#E2BDFF",
-    quaternary: "#F5E8FF"
-  }
+var gray = {
+  primary: "#181818",
+  secondary: "#5c5c5c",
+  tertiary: "#747474",
+  icon: "#7c7b7b",
+  border: "#d7d7d7",
+  divider: "#ededed",
+  disabled: "#8a8a8a",
+  white: "#FFFFFF",
+  black: "#000000"
+};
+var blue = {
+  primary: "#2d5bff",
+  secondary: "#6284fd",
+  tertiary: "#96ADFF",
+  quaternary: "#ECF0FF",
+  hover: "#1B4AF0",
+  click: "#002ED0"
+};
+var violet = {
+  primary: "#AF4BFE",
+  secondary: "#BE74F9",
+  tertiary: "#E2BDFF",
+  quaternary: "#F5E8FF"
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  colors,
-  text
+  background,
+  blue,
+  gray,
+  violet
 });
