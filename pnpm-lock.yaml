@@ -269,8 +269,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/alfabit-input
       '@brennoluan/alfabit-tokens':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: workspace:*
+        version: link:../../packages/alfabit-tokens
       react:
         specifier: ^19.2.6
         version: 19.2.7
@@ -577,9 +577,6 @@ packages:
       react: ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
       styled-components: ^5.0.0 || ^6.0.0
-
-  '@brennoluan/alfabit-tokens@0.1.0':
-    resolution: {integrity: sha512-B90t2XU1aRA9wa7salgR6VtB3CwoltHNZMH71hxLbG9Yrjl5uHtSHDKqn94SEEv6hQkvH9tbNqchsKrKEmWzvQ==}
 
   '@chromatic-com/storybook@5.2.1':
     resolution: {integrity: sha512-z6I7NJk/0VngA64y5TNYaB4Hc2X8+90n4op6lBt9PvWk5TmIlFLDqdX33rlrwbNRkkYijVgA/wO04rVYXi5Mlg==}
@@ -3830,8 +3827,6 @@ snapshots:
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
       styled-components: 6.4.2(css-to-react-native@3.2.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-
-  '@brennoluan/alfabit-tokens@0.1.0': {}
 
   '@chromatic-com/storybook@5.2.1(storybook@10.4.1(@testing-library/dom@10.4.1)(@types/react@19.2.16)(prettier@3.8.3)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))':
     dependencies:
