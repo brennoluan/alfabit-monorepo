@@ -1,6 +1,5 @@
-// @ts-ignore
-import type { Meta, StoryObj } from "@storybook/react";
-import { TextBlock } from "@brennoluan/alfabit-component";
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { TextBlock } from "@brennoluan/alfabit-textblock";
 
 const meta = {
   title: "Moléculas/TextBlock",
@@ -9,13 +8,32 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  args: {},
-  argTypes: {},
+  args: {
+    title: "Título",
+    description:
+      "Mussum Ipsum, cacilds vidis litro abertis.  Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.",
+  },
+  argTypes: {
+    title: {
+      control: {
+        type: "text",
+      },
+    },
+    description: {
+      control: {
+        type: "text",
+      },
+    },
+  },
 } satisfies Meta<typeof TextBlock>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    title: "Título",
+    description:
+      "Mussum Ipsum, cacilds vidis litro abertis.  Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.",
+  },
 };
