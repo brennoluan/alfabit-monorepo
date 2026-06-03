@@ -1,5 +1,9 @@
-const fs = require("fs-extra");
-const path = require("path");
+import fs from "fs-extra";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function createComponent(componentName) {
   try {
@@ -51,8 +55,6 @@ async function createComponent(componentName) {
         );
 
         await fs.writeFile(filePath, content);
-      } else {
-        console.log("Arquivo não termina com os formatos esperados");
       }
 
       const renames = [
