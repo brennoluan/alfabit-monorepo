@@ -14,7 +14,7 @@
   "dependencies": {
     "@brennoluan/alfabit-button": "workspace:*",
     "@brennoluan/alfabit-input": "workspace:*",
-    "@brennoluan/alfabit-tokens": "^0.1.0",
+    "@brennoluan/alfabit-tokens": "workspace:*",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "styled-components": "^6.4.2"
