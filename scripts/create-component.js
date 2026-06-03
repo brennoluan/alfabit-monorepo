@@ -63,8 +63,21 @@ async function createComponent(componentName) {
       ];
 
       for (const [oldPath, newPath] of renames) {
+        const oldFullPath = path.join(targetDir, oldPath);
+        const newFullPath = path.join(targetDir, newPath);
+
+        if (fs.existsSync(oldFullPath)) {
+          await fs.rename(oldFullPath, newFullPath);
+          console.log(`Renomeando: ${oldFullPath} -> ${newFullPath}`);
+        } else {
+          console.warn(
+            `Aviso: Arquivo não encontrado para ser renomeado: ${oldPath}`,
+          );
+        }
       }
     }
+
+    console.log(`Componente ${componentName} criado com sucesso!`);
   } catch (error) {
     console.error(`Erro ao criar o componente ${componentName}:`, error);
   }
