@@ -265,6 +265,12 @@ importers:
       '@brennoluan/alfabit-button':
         specifier: workspace:*
         version: link:../../packages/alfabit-button
+      '@brennoluan/alfabit-input':
+        specifier: workspace:*
+        version: link:../../packages/alfabit-input
+      '@brennoluan/alfabit-tokens':
+        specifier: workspace:*
+        version: link:../../packages/alfabit-tokens
       react:
         specifier: ^19.2.6
         version: 19.2.7
@@ -380,6 +386,36 @@ importers:
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
+
+  packages/alfabit-input:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.0.0
+        version: 18.3.30
+      '@types/styled-components':
+        specifier: ^5.1.26
+        version: 5.1.36
+      react:
+        specifier: ^18.0.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.0.0
+        version: 18.3.1(react@18.3.1)
+      rollup:
+        specifier: ^2.79.1
+        version: 2.80.0
+      rollup-plugin-typescript2:
+        specifier: ^0.31.2
+        version: 0.31.2(rollup@2.80.0)(ts-toolbelt@9.6.0)(typescript@5.9.3)
+      styled-components:
+        specifier: ^5.3.9
+        version: 5.3.11(@babel/core@7.29.7)(react-dom@18.3.1(react@18.3.1))(react-is@17.0.2)(react@18.3.1)
+      tslib:
+        specifier: ^2.8.0
+        version: 2.8.1
+      typescript:
+        specifier: ^5.5.3
+        version: 5.9.3
 
   packages/alfabit-tokens:
     devDependencies:
@@ -6080,6 +6116,19 @@ snapshots:
       rollup: 2.80.0
       tslib: 2.8.1
       typescript: 4.9.5
+    transitivePeerDependencies:
+      - ts-toolbelt
+
+  rollup-plugin-typescript2@0.31.2(rollup@2.80.0)(ts-toolbelt@9.6.0)(typescript@5.9.3):
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      '@yarn-tool/resolve-package': 1.0.47(ts-toolbelt@9.6.0)
+      find-cache-dir: 3.3.2
+      fs-extra: 10.1.0
+      resolve: 1.22.12
+      rollup: 2.80.0
+      tslib: 2.8.1
+      typescript: 5.9.3
     transitivePeerDependencies:
       - ts-toolbelt
 
