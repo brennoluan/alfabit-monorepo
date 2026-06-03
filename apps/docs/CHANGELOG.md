@@ -1,5 +1,14 @@
 # docs
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies
+  - @brennoluan/alfabit-button@1.2.0
+  - @brennoluan/alfabit-tokens@1.2.0
+  - @brennoluan/alfabit-textblock@1.0.0
+
 ## 0.0.3
 
 ### Patch Changes

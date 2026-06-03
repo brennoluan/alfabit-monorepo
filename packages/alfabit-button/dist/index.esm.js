@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { blue, gray } from '@brennoluan/alfabit-tokens';
+import { defaultTheme } from '@brennoluan/alfabit-tokens';
 
 /******************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -27,11 +27,11 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
 };
 
 var StyledButton = styled.button(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 4px;\n  font-weight: 600;\n  font-size: 16px;\n  line-height: 24px;\n  transition: all 0.2s ease-in-out;\n  cursor: pointer;\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n"], ["\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 4px;\n  font-weight: 600;\n  font-size: 16px;\n  line-height: 24px;\n  transition: all 0.2s ease-in-out;\n  cursor: pointer;\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n"])), function (_a) {
-    var variant = _a.variant;
-    return variant === "primary" && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n      background: ", ";\n      color: ", ";\n      border: none;\n\n      &:hover {\n        background: ", ";\n      }\n\n      &:active {\n        background: ", ";\n      }\n\n      &:disabled {\n        background: ", ";\n        cursor: not-allowed;\n      }\n    "], ["\n      background: ", ";\n      color: ", ";\n      border: none;\n\n      &:hover {\n        background: ", ";\n      }\n\n      &:active {\n        background: ", ";\n      }\n\n      &:disabled {\n        background: ", ";\n        cursor: not-allowed;\n      }\n    "])), blue.primary, gray.white, blue.hover, blue.click, gray.disabled);
+    var variant = _a.variant, theme = _a.theme;
+    return variant === "primary" && css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n      background: ", ";\n      color: ", ";\n      border: none;\n\n      &:hover {\n        background: ", ";\n      }\n\n      &:active {\n        background: ", ";\n      }\n\n      &:disabled {\n        background: ", ";\n        cursor: not-allowed;\n      }\n    "], ["\n      background: ", ";\n      color: ", ";\n      border: none;\n\n      &:hover {\n        background: ", ";\n      }\n\n      &:active {\n        background: ", ";\n      }\n\n      &:disabled {\n        background: ", ";\n        cursor: not-allowed;\n      }\n    "])), theme === null || theme === void 0 ? void 0 : theme.colors.primary, theme === null || theme === void 0 ? void 0 : theme.colors.white, theme === null || theme === void 0 ? void 0 : theme.colors.primary, theme === null || theme === void 0 ? void 0 : theme.colors.primary, theme === null || theme === void 0 ? void 0 : theme.colors.disabled);
 }, function (_a) {
-    var variant = _a.variant;
-    return variant === "secondary" && css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n      background: transparent;\n      color: ", ";\n      border: 2px solid ", ";\n\n      &:hover {\n        background: #ede9ff;\n      }\n\n      &:active {\n        background: #d5ccff;\n      }\n\n      &:disabled {\n        color: #c3c3c3;\n        border-color: #c3c3c3;\n        cursor: not-allowed;\n      }\n    "], ["\n      background: transparent;\n      color: ", ";\n      border: 2px solid ", ";\n\n      &:hover {\n        background: #ede9ff;\n      }\n\n      &:active {\n        background: #d5ccff;\n      }\n\n      &:disabled {\n        color: #c3c3c3;\n        border-color: #c3c3c3;\n        cursor: not-allowed;\n      }\n    "])), blue.primary, blue.primary);
+    var variant = _a.variant, theme = _a.theme;
+    return variant === "secondary" && css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n      background: transparent;\n      color: ", ";\n      border: 2px solid ", ";\n\n      &:hover {\n        background: ", ";\n      }\n\n      &:active {\n        background: #d5ccff;\n      }\n\n      &:disabled {\n        color: ", ";\n        border-color: ", ";\n        cursor: not-allowed;\n      }\n    "], ["\n      background: transparent;\n      color: ", ";\n      border: 2px solid ", ";\n\n      &:hover {\n        background: ", ";\n      }\n\n      &:active {\n        background: #d5ccff;\n      }\n\n      &:disabled {\n        color: ", ";\n        border-color: ", ";\n        cursor: not-allowed;\n      }\n    "])), theme === null || theme === void 0 ? void 0 : theme.colors.primary, theme === null || theme === void 0 ? void 0 : theme.colors.primary, theme === null || theme === void 0 ? void 0 : theme.colors.secondary, theme === null || theme === void 0 ? void 0 : theme.colors.disabled, theme === null || theme === void 0 ? void 0 : theme.colors.disabled);
 }, function (_a) {
     var size = _a.size;
     return size === "sm" && css(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n      padding: 8px 16px;\n      font-size: 14px;\n    "], ["\n      padding: 8px 16px;\n      font-size: 14px;\n    "])));
@@ -45,8 +45,8 @@ var StyledButton = styled.button(templateObject_6 || (templateObject_6 = __makeT
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6;
 
 var Button = function (_a) {
-    var _b = _a.variant, variant = _b === void 0 ? "primary" : _b, _c = _a.size, size = _c === void 0 ? "md" : _c, children = _a.children, disabled = _a.disabled, onClick = _a.onClick;
-    return (React.createElement(StyledButton, { size: size, variant: variant, disabled: disabled, onClick: onClick }, children));
+    var _b = _a.variant, variant = _b === void 0 ? "primary" : _b, _c = _a.size, size = _c === void 0 ? "md" : _c, children = _a.children, disabled = _a.disabled, onClick = _a.onClick, _d = _a.theme, theme = _d === void 0 ? defaultTheme : _d;
+    return (React.createElement(StyledButton, { size: size, variant: variant, disabled: disabled, onClick: onClick, theme: theme }, children));
 };
 
 export { Button };

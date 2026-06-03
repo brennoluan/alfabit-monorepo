@@ -9,8 +9,8 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
-    "@brennoluan/alfabit-button": "^1.1.0",
-    "@brennoluan/alfabit-tokens": "^1.1.0",
+    "@brennoluan/alfabit-button": "^1.2.0",
+    "@brennoluan/alfabit-tokens": "^1.2.0",
     "@react-router/fs-routes": "^7.16.0",
     "@react-router/node": "7.16.0",
     "@react-router/serve": "7.16.0",

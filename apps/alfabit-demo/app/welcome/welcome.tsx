@@ -1,4 +1,5 @@
 import { Button } from "@brennoluan/alfabit-button";
+import { darkTheme } from "@brennoluan/alfabit-tokens";
 
 export function Welcome() {
   return (
@@ -11,7 +12,7 @@ export function Welcome() {
             </h1>
           </div>
         </header>
-        <Button>Hello World, Alfabit npm!</Button>
+        <Button theme={darkTheme}>Hello World, Alfabit npm!</Button>
       </div>
     </main>
   );
