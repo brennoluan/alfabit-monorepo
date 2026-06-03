@@ -34,6 +34,24 @@ async function createComponent(componentName) {
         files.push(...subFiles.map((subFile) => path.join(file, subFile)));
         continue;
       }
+
+      if (
+        file.endsWith(".tsx") ||
+        file.endsWith(".ts") ||
+        files.endsWith(".json") ||
+        files.endsWith("js")
+      ) {
+        console.log(`Processando o arquivo: ${file}`);
+        let content = await fs.readFile(filePath, "utf-8");
+
+        content = content.replace(/Component/g, componentName);
+        content = content.replace(
+          /component-template/g,
+          componentName.toLowerCase(),
+        );
+
+        await fs.writeFile(filePath, content);
+      }
     }
   } catch (error) {
     console.error(`Erro ao criar o componente ${componentName}:`, error);
