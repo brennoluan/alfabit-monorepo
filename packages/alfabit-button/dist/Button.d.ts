@@ -1,4 +1,5 @@
 import React from "react";
+import { Theme } from "@brennoluan/alfabit-tokens";
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: "primary" | "secondary" | "tertiary";
     size?: "xs" | "sm" | "md" | "lg";
@@ -7,5 +8,6 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     iconPosition?: "left" | "right";
     disabled?: boolean;
     onClick?: () => void;
+    theme?: Theme;
 }
-export declare const Button: ({ variant, size, children, disabled, onClick, }: ButtonProps) => React.JSX.Element;
+export declare const Button: ({ variant, size, children, disabled, onClick, theme, }: ButtonProps) => React.JSX.Element;

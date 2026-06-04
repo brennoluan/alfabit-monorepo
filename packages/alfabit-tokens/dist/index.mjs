@@ -1,3 +1,23 @@
+var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (__hasOwnProp.call(b, prop))
+      __defNormalProp(a, prop, b[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b)) {
+      if (__propIsEnum.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
+var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+
 // src/colors.ts
 var background = {
   light: "#FFFFFF",
@@ -27,6 +47,15 @@ var violet = {
   secondary: "#BE74F9",
   tertiary: "#E2BDFF",
   quaternary: "#F5E8FF"
+};
+var green = {
+  primary: "#28a745"
+};
+var red = {
+  primary: "#dc3545"
+};
+var yellow = {
+  primary: "#ffc107"
 };
 
 // src/spacing.ts
@@ -157,12 +186,45 @@ var typography = {
     }
   }
 };
+
+// src/themes.ts
+var commonColors = {
+  black: gray.black,
+  white: gray.white,
+  success: green.primary,
+  error: red.primary,
+  warning: yellow.primary,
+  disabled: gray.disabled
+};
+var lightTheme = {
+  colors: __spreadProps(__spreadValues({}, commonColors), {
+    background: background.light,
+    text: gray.primary,
+    primary: blue.primary,
+    secondary: gray.secondary
+  })
+};
+var darkTheme = {
+  colors: __spreadProps(__spreadValues({}, commonColors), {
+    background: gray.primary,
+    text: gray.white,
+    primary: blue.tertiary,
+    secondary: gray.tertiary
+  })
+};
+var defaultTheme = lightTheme;
 export {
   background,
   blue,
+  darkTheme,
+  defaultTheme,
   gray,
+  green,
+  lightTheme,
+  red,
   shadows,
   spacing,
   typography,
-  violet
+  violet,
+  yellow
 };

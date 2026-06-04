@@ -27,6 +27,15 @@ declare const violet: {
     tertiary: string;
     quaternary: string;
 };
+declare const green: {
+    primary: string;
+};
+declare const red: {
+    primary: string;
+};
+declare const yellow: {
+    primary: string;
+};
 
 declare const spacing: {
     xs: string;
@@ -154,4 +163,22 @@ declare const typography: {
     };
 };
 
-export { background, blue, gray, shadows, spacing, typography, violet };
+type Theme = {
+    colors: {
+        background: string;
+        text: string;
+        primary: string;
+        secondary: string;
+        success: string;
+        error: string;
+        warning: string;
+        black: string;
+        white: string;
+        disabled: string;
+    };
+};
+declare const lightTheme: Theme;
+declare const darkTheme: Theme;
+declare const defaultTheme: Theme;
+
+export { type Theme, background, blue, darkTheme, defaultTheme, gray, green, lightTheme, red, shadows, spacing, typography, violet, yellow };
