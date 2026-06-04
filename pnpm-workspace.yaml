@@ -5,10 +5,5 @@ packages:
 allowBuilds:
   esbuild: true
 minimumReleaseAgeExclude:
-  - "@brennoluan/alfabit-button@0.1.1"
-  - "@brennoluan/alfabit-tokens@0.1.0"
-  - '@brennoluan/alfabit-button@1.0.0'
-  - '@brennoluan/alfabit-button@1.1.0'
-  - '@brennoluan/alfabit-tokens@1.1.0'
-  - '@brennoluan/alfabit-button@1.2.0'
-  - '@brennoluan/alfabit-tokens@1.2.0'
+  - "@brennoluan/alfabit-button"
+  - "@brennoluan/alfabit-tokens"
