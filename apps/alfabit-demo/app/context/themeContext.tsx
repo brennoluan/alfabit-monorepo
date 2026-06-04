@@ -1,4 +1,4 @@
-import type { Theme } from "@brennoluan/alfabit-tokens";
+import { defaultTheme, type Theme } from "@brennoluan/alfabit-tokens";
 import { createContext, useState } from "react";
 
 export const ThemeContext = createContext<{
@@ -10,7 +10,8 @@ export const ThemeContext = createContext<{
 });
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [appTheme, setAppTheme] = useState<Theme | undefined>(undefined);
+  const [appTheme, setAppTheme] = useState<Theme | undefined>(defaultTheme);
+
   return (
     <ThemeContext.Provider
       value={{ theme: appTheme, changeTheme: setAppTheme }}
