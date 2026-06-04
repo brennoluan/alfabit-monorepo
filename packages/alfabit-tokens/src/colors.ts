@@ -29,6 +29,7 @@ export const violet = {
   secondary: "#BE74F9",
   tertiary: "#E2BDFF",
   quaternary: "#F5E8FF",
+  quinary: "#FCF8FF",
 };
 
 export const green = {
