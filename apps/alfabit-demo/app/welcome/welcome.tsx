@@ -17,7 +17,7 @@ export function Welcome() {
         <header className="flex flex-col items-center gap-9">
           <div className="w-[500px] max-w-[100vw] p-4">
             <h1
-              className="leading text-2xl font-bold text-gray-800 dark:text-gray-100"
+              className="leading text-2xl font-bold"
               style={{ color: theme?.colors.text }}
             >
               Bem vindo ao Design System Alfabit
