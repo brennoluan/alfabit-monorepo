@@ -10,7 +10,7 @@ export function Welcome() {
 
   return (
     <main
-      className="flex items-center justify-center pt-16 pb-4"
+      className="flex  h-screen items-center justify-center pt-16 pb-4"
       style={{ backgroundColor: theme?.colors.background }}
     >
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
